@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = anahmulhaq/vprofileappdock
+        registry = 'anahmulhaq/vprofileappdock'
         registryCredential = 'dockerhub'
         ARTVERSION = "${env.BUILD_ID}"
     }
