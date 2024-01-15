@@ -105,11 +105,10 @@ pipeline {
                 }
         }
         stage('Test show validation output') {
-            agent {label 'KOPS'} {
+            agent {label 'KOPS'} 
                 steps {
                     sh "kubectl get all -n prod"
                 }
-            }
         }
 
     }
