@@ -104,6 +104,11 @@ pipeline {
                     sh "helm upgrade --install --force vprofile-stack helm/vprofilecharts --set appimage=${registry}:V${BUILD_NUMBER} --namespace prod"
                 }
         }
+        stage('Test show validation output') {
+            steps {
+                sh "kubectl get all -n prod"
+            }
+        }
 
     }
 
